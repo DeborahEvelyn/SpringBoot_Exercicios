@@ -12,26 +12,26 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table
+@Table 
 public class ServicoModel {
 	
 	@Id
 	@Column
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	private int id;
+	private Long id;
 	
-	@Column
+	@Column 
 	private String nome;
 	
 	@Column
-	@JsonFormat(pattern="yyyy-MM-dd")
+	@JsonFormat(pattern="YYYY-MM-DD")
 	private Date data;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -50,9 +50,5 @@ public class ServicoModel {
 	public void setData(Date data) {
 		this.data = data;
 	}
-		
 	
-	
-	
-
 }
